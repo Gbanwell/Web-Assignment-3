@@ -38,7 +38,7 @@
 			<main>
 				<h1>Order Event Tickets</h1>
 				<!-- The form starts here... -->
-				<form name="member_information" action="member_information.php" method="post">
+				<form name="order_form" action="order_form.php" method="post">
 					<fieldset>
 						<legend>Member Information</legend>
 						<label for="email">E-Mail:</label>
@@ -57,6 +57,59 @@
 						<input type="text" name="postal_code" id="postal_code" required pattern="[A-Za-z0-9]{6}" title="Must be 6 alphanumeric characters long" placeholder="6 characters long"><br>
 						<label for="phone">Phone Number:</label>
 						<input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be in the 999-999-9999 format" placeholder="999-999-9999"><br>
+					</fieldset>
+					<fieldset>
+					<legend>Ordering Information</legend>
+					<label for="event_type">Event:</label>
+						<select name="event_type" id="event_type">
+							<option value="C">Cookie Decoration Contest</option>
+							<option value="T">Tree Decoration Contest</option>
+							<option value="B"> Gift of Light Ride-Along</option>
+							<option value="G">Breakfast with Santa</option>
+						</select><br>
+					<label for="order_type">Order Type:</label>
+						<select name="order_type" id="order_type">
+							<option value="M">Member Package</option>
+							<option value="D">Donor Package</option>
+							<option value="S">Single Tickets</option>
+						</select><br>
+						<label for="number_of_tickets">Number of Tickets:</label>
+						<input type="text" name="number_of_tickets" id="number_of_tickets" title="Number of single tickets" pattern="[0-99]+" title="Number of single tickets" placeholder="Number of single tickets">><br>
+					</fieldset>
+					<fieldset>
+						<legend>Payment Method</legend>
+						<input type="radio" id="bill_me" name="payment_method" value="Bill Me">
+						<label for="bill_me">Bill Me</label>
+						<input type="radio" id="credit_card" name="payment_method" value="Credit Card">
+						<label for="credit_card">Credit Card</label>
+					</fieldset>
+					<fieldset>
+						<legend>Credit Card Information</legend>
+						<label for="card_type">Card Type:</label>
+						<select name="card_type" id="card_type">
+							<option value="V">Visa</option>
+							<option value="M">Master Card</option>
+							<option value="D">Discover</option>
+						</select><br>
+						<label for="card_number">Card Number:</label>
+						<input type="text" name="card_number" id="card_number" pattern="[0-16]+" title="16 digits" placeholder="16 digits"><br>
+						<label for="expiration_date">Expiration Date:</label>
+						<input id="expiration_date" name="expiration_date">
+						<select id="expiration_date" name="expiration_date">
+						<option>month</option>
+    						<option value="january">January</option>
+    						<option value="february">February</option>
+    						<option value="march">March</option>
+    						<option value="april">April</option>
+    						<option value="may">May</option>
+    						<option value="june">June</option>
+    						<option value="july">July</option>
+    						<option value="august">August</option>
+    						<option value="september">September</option>
+   							<option value="october">October</option>
+    						<option value="november">November</option>
+    						<option value="december">December</option>
+						</select>
 					</fieldset>
 				</form>
 			</main>
