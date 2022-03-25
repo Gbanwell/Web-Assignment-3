@@ -38,7 +38,27 @@
 			<main>
 				<h1>Order Event Tickets</h1>
 				<!-- The form starts here... -->
-				
+				<form name="member_information" action="member_information.php" method="post">
+					<fieldset>
+						<legend>Member Information</legend>
+						<label for="email">E-Mail:</label>
+						<input type="email" name="email" id="email" autofocus required><br>
+						<label for="first_name">First Name:</label>
+						<input type="text" name="first_name" id="first_name" required><br>
+						<label for="last_name">Last Name:</label>
+						<input type="text" name="last_name" id="last_name" required><br>
+						<label for="address">Address:</label>
+						<input type="text" name="address" id="address"><br>
+						<label for="city">City:</label>
+						<input type="text" name="city" id="city" required><br>
+						<label for="province">Province:</label>
+						<input type="text" name="province" id="province" maxlength="2" placeholder="2-character code" required><br>
+						<label for="postal_code">Postal Code:</label>
+						<input type="text" name="postal_code" id="postal_code" required pattern="[A-Za-z0-9]{6}" title="Must be 6 alphanumeric characters long" placeholder="6 characters long"><br>
+						<label for="phone">Phone Number:</label>
+						<input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be in the 999-999-9999 format" placeholder="999-999-9999"><br>
+					</fieldset>
+				</form>
 			</main>
 			
 			<footer>
