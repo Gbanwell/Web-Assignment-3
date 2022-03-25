@@ -38,7 +38,7 @@
 			<main>
 				<h1>Order Event Tickets</h1>
 				<!-- The form starts here... -->
-				<form name="order_form" action="order_form.php" method="post">
+				<form name="order_form" action="place_order.html" method="post">
 					<fieldset>
 						<legend>Member Information</legend>
 						<label for="email">E-Mail:</label>
@@ -76,12 +76,15 @@
 						<label for="number_of_tickets">Number of Tickets:</label>
 						<input type="number" name="number_of_tickets" id="number_of_tickets" min="0" step="1" title="Expecting a number" placeholder="Number of single tickets"><br>
 					</fieldset>
-					<fieldset>
+					<fieldset id='payment_method'>
+						
 						<legend>Payment Method</legend>
-						<input type="radio" id="bill_me" name="payment_method" value="Bill Me">
-						<label for="bill_me">Bill Me</label>
-						<input type="radio" id="credit_card" name="payment_method" value="Credit Card">
-						<label for="credit_card">Credit Card</label>
+						
+							<input class="radio" type="radio" id="bill_me" name="payment_method" value="Bill Me">
+							<label  for="bill_me">Bill Me</label>
+							<input class="radio" type="radio" id="credit_card" name="payment_method" value="Credit Card">
+							<label for="credit_card">Credit Card</label>
+						
 					</fieldset>
 					<fieldset>
 						<legend>Credit Card Information</legend>
@@ -94,7 +97,7 @@
 						<label for="card_number">Card Number:</label>
 						<input type="text" name="card_number" id="card_number" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" title="16 digits" placeholder="16 digits" required><br>
 						<label for="expiration_date">Expiration Date:</label>
-						<select id="expiration_date" name="expiration_date">
+						<select id="month" name="month">
 						<option>month</option>
     						<option value="january">January</option>
     						<option value="february">February</option>
@@ -122,8 +125,8 @@
 					</fieldset>
 					<fieldset>
 						<legend>Submit Your Order</legend>
-						<input type="submit" value="Submit">
-  						<input type="reset">
+						<input type="submit" value="Submit" class="submit">
+  						<input type="reset" class="reset">
 					</fieldset>
 				</form>
 			</main>
