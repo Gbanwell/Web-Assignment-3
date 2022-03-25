@@ -139,6 +139,24 @@ main ul#product-categories img {
 	box-shadow: 0px 0px 6px 2px #ecc03b;
 }
 
+main fieldset{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+main legend{
+	margin-bottom: 15px;
+	font-weight: bold;
+	color: grey;
+	font-size: 85%;
+}
+main input,select{
+	font-size: 90%;
+}
+main select{
+	font-size: 90%
+}
+
 /* the styles for the navigation menu */
 #nav_menu {
 	margin-top: 2px;
